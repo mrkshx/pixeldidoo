@@ -8,15 +8,29 @@ import { Component, OnInit } from '@angular/core';
 export class PixelContainerComponent implements OnInit {
   windowHeight: number = 0;
   windowWidth: number = 0;
+  PixelNumber: number = 0;
+  PixelNumberArray:  number[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
     this.getResolution();
+    this.calculatePixelNumber();
   }
 
   getResolution(): void {
     this.windowHeight = window.innerHeight;
     this.windowWidth = window.innerWidth;
+  }
+
+  calculatePixelNumber(): void {
+    if (this.windowHeight > 0 && this.windowWidth > 0) {
+      this.PixelNumber = (this.windowWidth * this.windowHeight) / (60 * 60)
+      this.PixelNumber = Math.round(this.PixelNumber)
+
+      for (let i = 1;  i <= this.PixelNumber;i++) {
+        this.PixelNumberArray.push(i)
+      }
+    }
   }
 }
