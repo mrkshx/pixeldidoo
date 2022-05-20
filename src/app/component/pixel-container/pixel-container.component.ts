@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pixel-container.component.scss']
 })
 export class PixelContainerComponent implements OnInit {
+  windowHeight: number = 0;
+  windowWidth: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.getResolution();
   }
 
+  getResolution(): void {
+    this.windowHeight = window.innerHeight;
+    this.windowWidth = window.innerWidth;
+  }
 }
