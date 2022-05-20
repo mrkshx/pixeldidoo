@@ -25,8 +25,8 @@ export class PixelContainerComponent implements OnInit {
 
   calculatePixelNumber(): void {
     if (this.windowHeight > 0 && this.windowWidth > 0) {
-      this.PixelNumber = (this.windowWidth * this.windowHeight) / (60 * 60)
-      this.PixelNumber = Math.round(this.PixelNumber)
+      this.PixelNumber = (this.windowWidth * this.windowHeight) / (55 * 55);
+      this.PixelNumber = Math.round(this.PixelNumber);
 
       for (let i = 1;  i <= this.PixelNumber;i++) {
         this.PixelNumberArray.push(i)
