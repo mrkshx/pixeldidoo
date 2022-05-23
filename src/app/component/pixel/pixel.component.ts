@@ -22,4 +22,6 @@ export class PixelComponent implements OnInit {
           this.color += this.letters[Math.floor(Math.random() * 16)];
         }
       }
+
+    
     }
