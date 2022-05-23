@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PixelComponent implements OnInit {
   color = '#'
+  borderColor = '#'
 
   constructor() { }
 
