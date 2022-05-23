@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PixelComponent implements OnInit {
   color = '#'
   borderColor = '#'
+  letters = '0123456789ABCDEF';
 
   constructor() { }
 
@@ -15,7 +16,6 @@ export class PixelComponent implements OnInit {
    this.getRandomColor()
   }
 
-  letters = '0123456789ABCDEF';
   getRandomColor() {
         this.color = "#";
         for (let i = 0; i < 6; i++) {
