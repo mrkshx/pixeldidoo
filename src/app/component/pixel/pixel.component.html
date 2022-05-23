@@ -1,2 +1,2 @@
-<div [style.background-color]="color"></div>
-<app-pixel-dialog></app-pixel-dialog>
+<div [style.background-color]="color" (mouseover)="showPixelDialog()" (mouseleave)="hidePixelDialog()"></div>
+<app-pixel-dialog *ngIf="dialogVisible" [color]="color"></app-pixel-dialog>

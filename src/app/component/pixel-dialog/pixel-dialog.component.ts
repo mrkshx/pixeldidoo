@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pixel-dialog',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pixel-dialog.component.scss']
 })
 export class PixelDialogComponent implements OnInit {
+  @Input() color: string = '';
 
   constructor() { }
 

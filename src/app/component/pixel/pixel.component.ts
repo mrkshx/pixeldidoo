@@ -3,25 +3,32 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-pixel',
   templateUrl: './pixel.component.html',
-  styleUrls: ['./pixel.component.scss']
+  styleUrls: ['./pixel.component.scss'],
 })
 export class PixelComponent implements OnInit {
-  color = '#'
-  borderColor = '#'
+  color = '#';
+  borderColor = '#';
   letters = '0123456789ABCDEF';
+  dialogVisible = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-   this.getRandomColor()
+    this.getRandomColor();
   }
 
   getRandomColor() {
-        this.color = "#";
-        for (let i = 0; i < 6; i++) {
-          this.color += this.letters[Math.floor(Math.random() * 16)];
-        }
-      }
-
-    
+    this.color = '#';
+    for (let i = 0; i < 6; i++) {
+      this.color += this.letters[Math.floor(Math.random() * 16)];
     }
+  }
+
+  showPixelDialog() {
+    this.dialogVisible = true;
+  }
+
+  hidePixelDialog() {
+    this.dialogVisible = false;
+  }
+}
