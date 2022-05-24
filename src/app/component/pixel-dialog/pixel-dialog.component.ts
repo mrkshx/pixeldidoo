@@ -6,13 +6,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./pixel-dialog.component.scss'],
 })
 export class PixelDialogComponent implements OnInit {
-  @Input() color: string = '';
+  @Input() colorString: string = '';
 
   rgbColor = {
     red: 0,
     green: 0,
     blue: 0,
   };
+
+  rgbColorString = '';
 
   constructor() {}
 
@@ -21,8 +23,9 @@ export class PixelDialogComponent implements OnInit {
   }
 
   convertColorToRGB(): void {
-    this.rgbColor.red = parseInt(this.color.substring(1, 3), 16);
-    this.rgbColor.green = parseInt(this.color.substring(3, 5), 16);
-    this.rgbColor.blue = parseInt(this.color.substring(5), 16);
+    this.rgbColor.red = parseInt(this.colorString.substring(1, 3), 16);
+    this.rgbColor.green = parseInt(this.colorString.substring(3, 5), 16);
+    this.rgbColor.blue = parseInt(this.colorString.substring(5), 16);
+    this.rgbColorString = `rgb(${this.rgbColor.red},${this.rgbColor.green},${this.rgbColor.blue})`;
   }
 }
