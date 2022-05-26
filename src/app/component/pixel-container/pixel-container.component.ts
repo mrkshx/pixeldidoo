@@ -28,8 +28,8 @@ export class PixelContainerComponent implements OnInit {
       let pixelRows;
       let pixelColumns;
 
-      pixelRows =  Math.floor(this.windowHeight / 55);
-      pixelColumns = Math.floor(this.windowWidth / 55);
+      pixelRows =  Math.floor(this.windowHeight / 50);
+      pixelColumns = Math.floor(this.windowWidth / 50);
 
       this.PixelNumber = pixelRows * pixelColumns
 
