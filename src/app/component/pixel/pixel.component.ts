@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pixel',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pixel.component.scss'],
 })
 export class PixelComponent implements OnInit {
+  @Input() height = 0;
   color = '#';
   borderColor = '#';
   letters = '0123456789ABCDEF';
@@ -28,7 +29,6 @@ export class PixelComponent implements OnInit {
 
   toggleDialog(trigger: any) {
     this.triggerOrigin = trigger;
-    this.overlayIsOpen = !this.overlayIsOpen
-
+    this.overlayIsOpen = !this.overlayIsOpen;
   }
 }

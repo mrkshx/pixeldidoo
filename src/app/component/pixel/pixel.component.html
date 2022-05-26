@@ -1,5 +1,11 @@
 <div
-[style.background-color]="color" (click)="toggleDialog($event)"></div>
+[style.background-color]="color"
+[style.height.px]="height"
+[style.width.px]="height"
+(click)="toggleDialog($event)"
+
+>
+</div>
 
 <ng-template
   cdkConnectedOverlay
