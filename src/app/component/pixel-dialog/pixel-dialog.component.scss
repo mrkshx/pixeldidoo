@@ -1,0 +1,23 @@
+#pixel-dialog {
+  height: 225px;
+  width: 225px;
+  border-radius: 15%;
+  z-index: 5;
+  position: fixed;
+  background-color: white;
+  padding-left: 10px;
+}
+
+#pixel-dialog-heading {
+  margin-top: 10px;
+}
+
+.color-selector {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  p {
+    width: 150px;
+    margin: 0;
+  }
+}
