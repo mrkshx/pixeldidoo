@@ -9,7 +9,9 @@ export class PixelComponent implements OnInit {
   color = '#';
   borderColor = '#';
   letters = '0123456789ABCDEF';
-  dialogVisible = false;
+
+  overlayIsOpen = false;
+  triggerOrigin: any;
 
   constructor() {}
 
@@ -24,11 +26,9 @@ export class PixelComponent implements OnInit {
     }
   }
 
-  showPixelDialog() {
-    this.dialogVisible = true;
-  }
+  toggleDialog(trigger: any) {
+    this.triggerOrigin = trigger;
+    this.overlayIsOpen = !this.overlayIsOpen
 
-  hidePixelDialog() {
-    this.dialogVisible = false;
   }
 }

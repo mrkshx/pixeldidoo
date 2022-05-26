@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import {OverlayModule} from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    ClipboardModule
+    ClipboardModule,
+    OverlayModule
   ],
   providers: [],
   bootstrap: [AppComponent]
