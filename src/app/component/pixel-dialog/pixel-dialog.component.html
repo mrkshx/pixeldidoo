@@ -1,12 +1,16 @@
-<div>
+<div id="pixel-container">
   <h1>Pixel Color</h1>
 
-  <p>{{colorString}}</p>
-  <button mat-mini-fab [cdkCopyToClipboard]="colorString">
-    <mat-icon>content_copy</mat-icon>
-  </button>
-  <p>{{rgbColorString}}</p>
-  <button mat-mini-fab [cdkCopyToClipboard]="rgbColorString">
-    <mat-icon>content_copy</mat-icon>
-  </button>
+  <div class="color-selector">
+    <p>{{colorString}}</p>
+    <button mat-mini-fab [cdkCopyToClipboard]="colorString">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+  </div>
+  <div class="color-selector">
+    <p>{{rgbColorString}}</p>
+    <button mat-mini-fab [cdkCopyToClipboard]="rgbColorString">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+  </div>
 </div>
