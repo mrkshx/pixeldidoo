@@ -13,4 +13,10 @@
       <mat-icon>content_copy</mat-icon>
     </button>
   </div>
+  <div class="color-selector">
+    <p>{{hslColorString}}</p>
+    <button mat-mini-fab [cdkCopyToClipboard]="hslColorString">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+  </div>
 </div>
