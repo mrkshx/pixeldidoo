@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/pixeldidoo",
     "ignore": [
       "firebase.json",
       "**/.*",
