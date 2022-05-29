@@ -24,9 +24,6 @@ jobs:
           name: Build project
           command: npm run build
       - run:
-          name: Installing Firebase-Tools
-          command: npm run firebase-tools
-      - run:
           name: Firebase Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
           
