@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {OverlayModule} from '@angular/cdk/overlay';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {OverlayModule} from '@angular/cdk/overlay';
     MatButtonModule,
     MatIconModule,
     ClipboardModule,
-    OverlayModule
+    OverlayModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
