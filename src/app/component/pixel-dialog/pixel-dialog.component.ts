@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-pixel-dialog',
@@ -24,7 +25,7 @@ export class PixelDialogComponent implements OnInit {
 
   hslColorString = '';
 
-  constructor() {}
+  constructor(private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
     this.convertColorToRGB();
@@ -77,5 +78,11 @@ export class PixelDialogComponent implements OnInit {
     }
 
     this.hslColorString = `hsl(${this.hslColor.h}, ${this.hslColor.s}%, ${this.hslColor.l}%)`;
+  }
+
+  openSnackbar(colorValue: string): void {
+    this._snackBar.open(`Color value: ${colorValue}`, " Copied to clipboard", {
+      duration:  5000,
+    });
   }
 }

@@ -3,19 +3,19 @@
 
   <div class="color-selector">
     <p>{{colorString}}</p>
-    <button mat-mini-fab [cdkCopyToClipboard]="colorString">
+    <button mat-mini-fab [cdkCopyToClipboard]="colorString" (click)="openSnackbar(colorString)">
       <mat-icon>content_copy</mat-icon>
     </button>
   </div>
   <div class="color-selector">
     <p>{{rgbColorString}}</p>
-    <button mat-mini-fab [cdkCopyToClipboard]="rgbColorString">
+    <button mat-mini-fab [cdkCopyToClipboard]="rgbColorString" (click)="openSnackbar(rgbColorString)">
       <mat-icon>content_copy</mat-icon>
     </button>
   </div>
   <div class="color-selector">
     <p>{{hslColorString}}</p>
-    <button mat-mini-fab [cdkCopyToClipboard]="hslColorString">
+    <button mat-mini-fab [cdkCopyToClipboard]="hslColorString" (click)="openSnackbar(hslColorString)">
       <mat-icon>content_copy</mat-icon>
     </button>
   </div>
