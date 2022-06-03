@@ -1,22 +1,20 @@
-<div id="pixel-dialog">
-  <h1 id="pixel-dialog-heading">Pixel Color</h1>
+<h1 id="pixel-dialog-heading">Pixel Color</h1>
 
-  <div class="color-selector">
-    <p>{{colorString}}</p>
-    <button mat-mini-fab [cdkCopyToClipboard]="colorString" (click)="openSnackbar(colorString)">
-      <mat-icon>content_copy</mat-icon>
-    </button>
-  </div>
-  <div class="color-selector">
-    <p>{{rgbColorString}}</p>
-    <button mat-mini-fab [cdkCopyToClipboard]="rgbColorString" (click)="openSnackbar(rgbColorString)">
-      <mat-icon>content_copy</mat-icon>
-    </button>
-  </div>
-  <div class="color-selector">
-    <p>{{hslColorString}}</p>
-    <button mat-mini-fab [cdkCopyToClipboard]="hslColorString" (click)="openSnackbar(hslColorString)">
-      <mat-icon>content_copy</mat-icon>
-    </button>
-  </div>
+<div class="color-selector">
+  <p>{{data.colorString}}</p>
+  <button mat-mini-fab [cdkCopyToClipboard]="data.colorString" (click)="openSnackbar(data.colorString)">
+    <mat-icon>content_copy</mat-icon>
+  </button>
+</div>
+<div class="color-selector">
+  <p>{{rgbColorString}}</p>
+  <button mat-mini-fab [cdkCopyToClipboard]="rgbColorString" (click)="openSnackbar(rgbColorString)">
+    <mat-icon>content_copy</mat-icon>
+  </button>
+</div>
+<div class="color-selector">
+  <p>{{hslColorString}}</p>
+  <button mat-mini-fab [cdkCopyToClipboard]="hslColorString" (click)="openSnackbar(hslColorString)">
+    <mat-icon>content_copy</mat-icon>
+  </button>
 </div>

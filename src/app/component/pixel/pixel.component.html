@@ -2,20 +2,6 @@
 [style.background-color]="color"
 [style.height.px]="height"
 [style.width.px]="height"
-(click)="toggleDialog($event)"
-
+(click)="openDialog()"
 >
 </div>
-
-<ng-template
-  cdkConnectedOverlay
-  [cdkConnectedOverlayOrigin]="triggerOrigin"
-  [cdkConnectedOverlayHasBackdrop]="true"
-  (backdropClick)="overlayIsOpen = false"
-  [cdkConnectedOverlayOpen]="overlayIsOpen"
->
-  <app-pixel-dialog
-  [colorString]="color"
-  (mouseleave)="overlayIsOpen = false">
-  </app-pixel-dialog>
-</ng-template>
