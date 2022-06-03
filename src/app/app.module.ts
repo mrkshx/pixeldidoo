@@ -11,13 +11,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SuperheaderComponent } from './component/superheader/superheader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PixelComponent,
     PixelContainerComponent,
-    PixelDialogComponent
+    PixelDialogComponent,
+    SuperheaderComponent
   ],
   imports: [
     BrowserModule,
