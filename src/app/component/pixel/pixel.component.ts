@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { PixelDialogComponent } from '../pixel-dialog/pixel-dialog.component';
+
 
 @Component({
   selector: 'app-pixel',
@@ -11,7 +14,7 @@ export class PixelComponent implements OnInit {
   borderColor = '#';
   letters = '0123456789ABCDEF';
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.getRandomColor();
@@ -24,8 +27,11 @@ export class PixelComponent implements OnInit {
     }
   }
 
-  toggleDialog(trigger: any) {
-    this.triggerOrigin = trigger;
-    this.overlayIsOpen = !this.overlayIsOpen;
+  openDialog() {
+  this.dialog.open(PixelDialogComponent, {
+    data: {
+      colorString: this.color,
+    }
+  });
   }
 }

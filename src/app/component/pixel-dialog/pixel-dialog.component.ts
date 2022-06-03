@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-pixel-dialog',
@@ -7,7 +8,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./pixel-dialog.component.scss'],
 })
 export class PixelDialogComponent implements OnInit {
-  @Input() colorString: string = '';
 
   rgbColor = {
     red: 0,
@@ -25,7 +25,10 @@ export class PixelDialogComponent implements OnInit {
 
   hslColorString = '';
 
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     this.convertColorToRGB();
@@ -33,9 +36,9 @@ export class PixelDialogComponent implements OnInit {
   }
 
   convertColorToRGB(): void {
-    this.rgbColor.red = parseInt(this.colorString.substring(1, 3), 16);
-    this.rgbColor.green = parseInt(this.colorString.substring(3, 5), 16);
-    this.rgbColor.blue = parseInt(this.colorString.substring(5), 16);
+    this.rgbColor.red = parseInt(this.data.colorString.substring(1, 3), 16);
+    this.rgbColor.green = parseInt(this.data.colorString.substring(3, 5), 16);
+    this.rgbColor.blue = parseInt(this.data.colorString.substring(5), 16);
     this.rgbColorString = `rgb(${this.rgbColor.red},${this.rgbColor.green},${this.rgbColor.blue})`;
   }
 
@@ -82,7 +85,7 @@ export class PixelDialogComponent implements OnInit {
 
   openSnackbar(colorValue: string): void {
     this._snackBar.open(`Color value: ${colorValue}`, " Copied to clipboard", {
-      duration:  5000,
+      duration:  5000
     });
   }
 }
