@@ -11,9 +11,6 @@ export class PixelComponent implements OnInit {
   borderColor = '#';
   letters = '0123456789ABCDEF';
 
-  overlayIsOpen = false;
-  triggerOrigin: any;
-
   constructor() {}
 
   ngOnInit(): void {
