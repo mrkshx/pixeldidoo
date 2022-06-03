@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {ClipboardModule} from '@angular/cdk/clipboard';
-import {OverlayModule} from '@angular/cdk/overlay';
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
@@ -25,7 +25,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatButtonModule,
     MatIconModule,
     ClipboardModule,
-    OverlayModule,
+    MatDialogModule,
     MatSnackBarModule
   ],
   providers: [],
